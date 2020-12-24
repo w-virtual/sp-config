@@ -28,8 +28,8 @@ zuul:
 #    order-service: /order-service/**
     
 ribbon:
-  ConnectTimeout: 1000
-  ReadTimeout: 1000
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
   MaxAutoRetriesNextServer: 1
   MaxAutoRetries: 1
   
@@ -39,7 +39,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 500
+            timeoutInMilliseconds: 5000
             
 management:
   endpoints:
